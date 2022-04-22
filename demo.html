@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Menu screen</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    function load(){
+        App.getmenu();
+    }
+
+    function addToCart()
+    {
+      console.log('Working');
+      // window.open('https://google.com')
+
+    }
+
+    function filterFood()
+    {
+      var x = document.getElementById('filterme');
+      if(x.style.display == 'none')
+      {
+        x.style.display = 'flex';
+        x.style.padding = '10px';
+        x.style.justifyContent = 'space-around';
+      }
+      else
+      {
+        x.style.display = 'none';
+      }
+    }
+
+  </script>
+</head>
+<style>
+td{
+  padding:5px;
+}
+
+#foodcol
+{
+  margin: 15px;
+  width : 600px;
+  float: left;
+  padding: 0px !important;
+}
+
+#foodname
+{
+  /* color:aqua; */
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+#fooddesc
+{
+  font-style: italic;
+  
+}
+
+.foodimg
+{
+  border-radius: 6px;
+  width : 179px;
+  height: 116px;
+}
+
+.price
+{
+  font-weight: bold;
+  color: rgb(244, 140, 76);
+}
+
+.add-button
+{
+  height:30px;
+  width:60px;
+}
+
+#filterme
+{
+  display : none;
+  height: 50px;
+  margin: 0% 8%; 
+}
+
+.filterElements
+{
+  width:20%;
+}
+</style>
+
+<body onload="load();">
+
+<nav class="navbar" style="background-color: #ff8c003b; border-radius: 0px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">RMS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">     
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
+            
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+            <li style="padding:0 20px;">
+              <a href="#">
+                <img src="./assets/menu (2).png" alt="icon here" style="width: 25px;height: 25px;" >
+              </a>
+            </li>
+            <li style="padding:0 20px;">
+              <a href="#">
+                <img src="./assets/filter.png" alt="icon here" style="width: 25px;height: 25px;" onClick="filterFood()">
+              </a>
+            </li>
+            <li style="padding:0 20px;">
+              <a href="#">
+                <img src="./assets/shopping-cart (2).png" alt="icon here" style="width: 25px;height: 25px;">
+              </a></li>
+            <li style="padding:0 20px;">
+              <a href="#">
+                <img src="./assets/user (3).png" alt="user icon here" style="width: 25px;height: 25px;">
+              </a>
+            </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="filterme" class="bg-warning d-flex justify-content-around">
+  <!-- Display me -->
+  
+    <input type="search" id="form1" class="form-control filterElements" placeholder="Type query" aria-label="Search" />
+    <input type="search" id="form1" class="form-control filterElements" placeholder="Type query" aria-label="Search" />
+    <input type="search" id="form1" class="form-control filterElements" placeholder="Type query" aria-label="Search" />
+   
+
+  
+</div>
+
+<!-- table content to be displayed -->
+
+<table class="menu-content container">
+  <tbody id="Menu">
+  </tbody>
+</table>
+  
+<script src="try.js"></script>
+
+</body>
+</html>
+
+
